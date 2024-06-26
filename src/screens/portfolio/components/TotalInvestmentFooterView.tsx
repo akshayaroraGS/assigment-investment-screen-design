@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {PortfolioResponse} from '../types/PortfolioResponse';
 import {COLORS} from '../../shared/theme/AppColors';
-import {useDataCalculations} from '../hooks/useDataCalculations';
+import {useTotalCalculations} from '../hooks/useTotalCalculations';
 
 type Props = {
   data: PortfolioResponse | null;
@@ -16,7 +16,7 @@ const TotalInvestmentFooterView: React.FC<Props> = ({data}) => {
     totalInvestmentCurrentValue,
     totalPnL,
     totalTodayPnL,
-  } = useDataCalculations(data);
+  } = useTotalCalculations(data);
 
   const onExpandClickHandle = () => {
     setExpenedView(!expenedView);

@@ -1,6 +1,6 @@
 import {PortfolioResponse} from '../types/PortfolioResponse';
 
-export const useDataCalculations = (data: PortfolioResponse | null) => {
+export const useTotalCalculations = (data: PortfolioResponse | null) => {
   const totalInvestmentValue: number =
     data?.data?.userHolding
       ?.reduce((acc, currentItem) => {
